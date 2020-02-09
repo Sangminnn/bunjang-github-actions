@@ -1,5 +1,3 @@
-import { format } from 'date-fns';
-
 import { fetchItems } from "./remotes";
 import createIssue from './github';
 import candidates from './data/candidates';
@@ -42,7 +40,8 @@ async function main() {
 );
 
   const body = sections.join("\n\n");
-  createIssue(`${format(Date.now(), "yyyy-MM-dd")}일 새로 올라온 방`, body);
+  const time = Date.now();
+  createIssue(`${new Date(time).toISOString().slice(0, 10)}일 새로 올라온 방`, body);
 };
 
 main();
