@@ -1,6 +1,6 @@
 import { differenceInCalendarDays, addHours } from 'date-fns';
 
-export class Item {
+export default class Item {
   constructor(payload) {
     const { name, pid, price, image, update_time } = payload;
     

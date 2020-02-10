@@ -19,17 +19,17 @@ async function main() {
             image,
             updateTime
           }) => {
-            const name = `## [${name}]`;
-            const image = `<img src=${image} />`;
-            const price = `${price} 원`;
+            const title = `## [${name}]`;
+            const thumbnail = `<img src=${image} />`;
+            const kprice = `${price} 원`;
             
             return [
-              name,
-              image,
+              title,
+              thumbnail,
               "",
               ` | 제목 | 가격 |`,
               ` |  -  |  -  |`,
-              ` | ${name} | ${price} |`,
+              ` | ${name} | ${kprice} |`,
             ].join("\n");
           }
         )
