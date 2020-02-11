@@ -2,6 +2,8 @@
 
 require("regenerator-runtime/runtime");
 
+var _dateFns = require("date-fns");
+
 var _remotes = require("./remotes");
 
 var _github = _interopRequireDefault(require("./github.js"));
@@ -53,14 +55,14 @@ function _main() {
 
                       case 2:
                         items = _context.sent;
-                        section = ["# ".concat(candidate.id, ": ").concat(items.length, "\uAC1C"), ""].concat(_toConsumableArray(items.map(function (_ref2) {
+                        section = ["# \uC624\uB298\uC62C\uB77C\uC628 \uB9E4\uBB3C: ".concat(items.length, "\uAC1C"), ""].concat(_toConsumableArray(items.map(function (_ref2) {
                           var name = _ref2.name,
                               pid = _ref2.pid,
                               price = _ref2.price,
-                              image = _ref2.image,
+                              productImage = _ref2.productImage,
                               updateTime = _ref2.updateTime;
                           var title = "## [".concat(name, "]");
-                          var thumbnail = "<img src=".concat(image, " />");
+                          var thumbnail = "<img style=\"width: 100%; height: 500px;\" src=".concat(productImage, " />");
                           var kprice = "".concat(price, " \uC6D0");
                           return [title, thumbnail, "", " | \uC81C\uBAA9 | \uAC00\uACA9 |", " |  -  |  -  |", " | ".concat(name, " | ").concat(kprice, " |")].join("\n");
                         }))).join("\n");
@@ -82,7 +84,7 @@ function _main() {
           case 3:
             body = sections.join("\n\n");
             time = Date.now();
-            (0, _github["default"])("".concat(new Date(time).toISOString().slice(0, 10), "\uC77C \uC0C8\uB85C \uC62C\uB77C\uC628 \uBC29"), body);
+            (0, _github["default"])("".concat((0, _dateFns.format)(Date.now(), "yyyy-MM-dd"), "\uC77C \uC0C8\uB85C \uC62C\uB77C\uC628 \uB9E4\uBB3C"), body);
 
           case 6:
           case "end":

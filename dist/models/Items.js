@@ -27,12 +27,12 @@ var Item = function Item(payload) {
   var name = payload.name,
       pid = payload.pid,
       price = payload.price,
-      image = payload.image,
+      product_image = payload.product_image,
       update_time = payload.update_time;
   this.name = name;
   this.pid = pid;
   this.price = price;
-  this.image = image;
+  this.productImage = product_image;
   this.updateTime = update_time;
 };
 
