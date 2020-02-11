@@ -1,4 +1,5 @@
 import "regenerator-runtime/runtime";
+import { format } from 'date-fns';
 
 import { fetchItems } from "./remotes";
 import createIssue from './github.js';
@@ -22,7 +23,7 @@ async function main() {
             updateTime
           }) => {
             const title = `## [${name}]`;
-            const thumbnail = `<img src=${productImage} />`;
+            const thumbnail = `<img style="width: 100%; height: 500px;" src=${productImage} />`;
             const kprice = `${price} 원`;
             
             return [
@@ -43,7 +44,7 @@ async function main() {
 
   const body = sections.join("\n\n");
   const time = Date.now();
-  createIssue(`${new Date(time).toISOString().slice(0, 10)}일 새로 올라온 방`, body);
+  createIssue(`${format(Date.now(), "yyyy-MM-dd")}일 새로 올라온 매물`, body);
 };
 
 main();
