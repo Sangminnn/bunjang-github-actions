@@ -11,18 +11,18 @@ async function main() {
     candidates.map(async candidate => {
       const items = await fetchItems(candidate);
       const section = [
-        `# ${candidate.id}: ${items.length}개`,
+        `# 오늘올라온 매물: ${items.length}개`,
         "",
         ...items.map(
           ({
             name,
             pid,
             price,
-            image,
+            productImage,
             updateTime
           }) => {
             const title = `## [${name}]`;
-            const thumbnail = `<img src=${image} />`;
+            const thumbnail = `<img src=${productImage} />`;
             const kprice = `${price} 원`;
             
             return [

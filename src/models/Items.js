@@ -7,7 +7,7 @@ export default class Item {
     this.name = name;
     this.pid = pid;
     this.price = price;
-    this.image = product_image;
+    this.productImage = product_image;
     this.updateTime = update_time;
   }
 
