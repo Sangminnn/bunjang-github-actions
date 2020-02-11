@@ -12,7 +12,7 @@ async function main() {
     candidates.map(async candidate => {
       const items = await fetchItems(candidate);
       const section = [
-        `# 오늘올라온 매물: ${items.length}개`,
+        `# ${candidate}: ${items.length}개`,
         "",
         ...items.map(
           ({

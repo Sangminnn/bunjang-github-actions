@@ -5,6 +5,8 @@ import Item from '../models/Items';
 const apiEndpoint = 'https://api.bunjang.co.kr/api/1/find_v2.json';
 
 export async function fetchItems(candidate) {
+  // api 에 들어가는 코드들을 분석한 결과 q만 search data로 변경
+  // 정확한 request-id 는 모르겠지만 성공코드를 따왔음.
   const query = {
     q: candidate,
     order: 'date',

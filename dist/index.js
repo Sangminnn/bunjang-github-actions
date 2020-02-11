@@ -55,7 +55,7 @@ function _main() {
 
                       case 2:
                         items = _context.sent;
-                        section = ["# \uC624\uB298\uC62C\uB77C\uC628 \uB9E4\uBB3C: ".concat(items.length, "\uAC1C"), ""].concat(_toConsumableArray(items.map(function (_ref2) {
+                        section = ["# ".concat(candidate, ": ").concat(items.length, "\uAC1C"), ""].concat(_toConsumableArray(items.map(function (_ref2) {
                           var name = _ref2.name,
                               pid = _ref2.pid,
                               price = _ref2.price,

@@ -33,6 +33,8 @@ function _fetchItems() {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
+            // api 에 들어가는 코드들을 분석한 결과 q만 search data로 변경
+            // 정확한 request-id 는 모르겠지만 성공코드를 따왔음.
             query = {
               q: candidate,
               order: 'date',
