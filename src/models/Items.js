@@ -2,12 +2,12 @@ import { differenceInCalendarDays, addHours } from 'date-fns';
 
 export default class Item {
   constructor(payload) {
-    const { name, pid, price, image, update_time } = payload;
+    const { name, pid, price, product_image, update_time } = payload;
     
     this.name = name;
     this.pid = pid;
     this.price = price;
-    this.image = image;
+    this.image = product_image;
     this.updateTime = update_time;
   }
 
