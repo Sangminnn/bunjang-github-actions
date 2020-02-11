@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
-  externals: { fs: "commonjs fs", child_process: "commonjs child_process", readline: "commonjs readline", path: "commonjs path", navigator: "commonjs navigator" },
+  externals: { fs: "commonjs fs", child_process: "commonjs child_process", readline: "commonjs readline", path: "commonjs path" },
   module: {
     rules: [
       {
@@ -21,7 +21,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
-            plugins: ['@babel/plugin-proposal-class-properties']
+            plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-proposal-export-default-from']
           }
         }
       }
@@ -29,5 +29,5 @@ module.exports = {
   },
   devtool: 'source-map',
   // https://webpack.js.org/concepts/mode/#mode-development
-  mode: 'development'
+  mode: 'none'
 };

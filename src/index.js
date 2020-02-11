@@ -1,5 +1,7 @@
+import "regenerator-runtime/runtime";
+
 import { fetchItems } from "./remotes";
-import createIssue from './github';
+import createIssue from './github.js';
 import candidates from './data/candidates';
 
 async function main() {

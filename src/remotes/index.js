@@ -7,7 +7,7 @@ const apiEndpoint = 'https://api.bunjang.co.kr/api/1/find_v2.json';
 export async function fetchItems(candidate) {
   const query = {
     q: candidate,
-    order: date,
+    order: 'date',
     page: 0,
     request_id: 2020208153534,
     stat_uid: 7823918,
