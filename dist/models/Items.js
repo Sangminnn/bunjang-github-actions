@@ -21,7 +21,7 @@ var Item = function Item(payload) {
     var updateTime = new Date(_this.updateTime).toISOString().slice(0, 10);
     var currentTime = now.toISOString().slice(0, 10);
     var diff = (0, _dateFns.differenceInCalendarDays)(currentTime, updateTime);
-    return diff < 2;
+    return diff < 1;
   });
 
   var name = payload.name,

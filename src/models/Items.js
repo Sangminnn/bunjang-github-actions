@@ -18,7 +18,7 @@ export default class Item {
 
     const diff = differenceInCalendarDays(currentTime, updateTime);
 
-    return diff < 2;
+    return diff < 1;
   }
 }
   
