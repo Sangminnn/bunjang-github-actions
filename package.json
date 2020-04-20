@@ -25,7 +25,7 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
-    "actions-toolkit": "^2.2.0",
+    "actions-toolkit": "^4.0.0",
     "axios": "^0.19.2",
     "babel-loader": "^8.0.6",
     "date-fns": "^2.9.0",
