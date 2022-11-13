@@ -31,6 +31,6 @@
     "date-fns": "^2.9.0",
     "query-string": "^6.10.1",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.12"
   }
 }
